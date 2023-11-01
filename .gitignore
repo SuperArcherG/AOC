@@ -5,3 +5,4 @@ dotnet-install.sh
 2022/2/obj/*
 2022/10/bin/*
 2022/10/obj/*
+.vscode/*
