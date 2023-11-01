@@ -1,3 +1,7 @@
 dotnet-install.sh
-*/bin/*
-*/obj/*
+2022/1/bin/*
+2022/1/obj/*
+2022/2/bin/*
+2022/2/obj/*
+2022/10/bin/*
+2022/10/obj/*
