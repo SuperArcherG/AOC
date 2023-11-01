@@ -8,7 +8,7 @@ namespace Day10
     class Program
     {
         static public readonly bool DebugLog = false;
-        static readonly string inputPath = Directory.GetCurrentDirectory().Replace("Day10/bin/Debug/netcoreapp3.1", "") + "Input.txt"; //The directory of your input text file, create an Input.txt at your "System.AppContext.BaseDirectory" folder
+        static readonly string inputPath = Directory.GetCurrentDirectory().Replace("Day10/bin/Debug/netcoreapp3.1", "") + "/Input.txt"; //The directory of your input text file, create an Input.txt at your "System.AppContext.BaseDirectory" folder
         static bool[,] CRT = new bool[40, 6];
         static void Main()
         {

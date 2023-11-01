@@ -32,7 +32,7 @@ namespace Day2
                 { "C Z", "A"}
         };
 
-        static readonly string inputPath = Directory.GetCurrentDirectory().Replace("Day2/bin/Debug/netcoreapp3.1", "") + "Input.txt"; //The directory of your input text file, create an Input.txt at your "System.AppContext.BaseDirectory" folder
+        static readonly string inputPath = Directory.GetCurrentDirectory().Replace("Day2/bin/Debug/netcoreapp3.1", "") + "/Input.txt"; //The directory of your input text file, create an Input.txt at your "System.AppContext.BaseDirectory" folder
 
         static List<int> scores = new List<int> { };
 
