@@ -44,8 +44,8 @@ namespace Day1
             //Finds biggest number and print it
             Array.Sort(totalCalories);
             Array.Reverse(totalCalories);
-            Console.WriteLine("Part 1: " + totalCalories[0]);
-            Console.WriteLine("Part 2: " + (totalCalories[0] + totalCalories[1] + totalCalories[2]));
+            Console.WriteLine("A: " + totalCalories[0]);
+            Console.WriteLine("B: " + (totalCalories[0] + totalCalories[1] + totalCalories[2]));
         }
     }
 }

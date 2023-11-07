@@ -73,4 +73,4 @@ for group in groupedSacks:
     total += priority #add to total
 
     #print(match)
-print("B",total)
+print("B:",total)

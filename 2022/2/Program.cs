@@ -43,20 +43,20 @@ namespace Day2
             foreach (string line in lines)
             {
                 string[] moves = line.Split(" ");
-                Console.Write(moves[0] + "," + moves[1] + " | ");
+                //Console.Write(moves[0] + "," + moves[1] + " | ");
                 RPS[] states = new RPS[2] { StringToRPS(moves[0]), StringToRPS(moves[1]) };
-                Console.Write(states[0] + " , " + states[1] + " | ");
+                //Console.Write(states[0] + " , " + states[1] + " | ");
                 int points = PointsAwarded(states[0], states[1]);
                 scores.Add(points);
-                Console.Write(points + " | ");
-                Console.WriteLine();
+                //Console.Write(points + " | ");
+                //Console.WriteLine();
             }
             int total = 0;
             foreach (int score in scores)
             {
                 total += score;
             }
-            Console.WriteLine("Pt. 1: " + total);
+            Console.WriteLine("A: " + total);
 
             total = 0;
             foreach (string line in lines)
@@ -67,39 +67,39 @@ namespace Day2
                 int _base = (int)StringToRPS(response);
                 total += _base + bonus;
             }
-            Console.WriteLine("Pt. 2: " + total);
+            Console.WriteLine("B: " + total);
         }
 
         static int PointsAwarded(RPS Elf, RPS You)
         {
             if (Elf == You)
             {
-                Console.Write("Draw | ");
+                //Console.Write("Draw | ");
                 return (int)Award.Draw + (int)You;
             }
 
             if (Elf < You && Elf != You - 2 || You == Elf - 2)
             {
-                Console.Write("You Win | ");
+                //Console.Write("You Win | ");
                 return (int)Award.Win + (int)You;
             }
 
             if (Elf > You || You == Elf + 2)
             {
-                Console.Write("You loose | ");
+                //Console.Write("You loose | ");
                 return (int)Award.Loss + (int)You;
             }
 
             if (Elf != You - 2)
             {
-                Console.Write("You Win | ");
+                //Console.Write("You Win | ");
                 return (int)Award.Win + (int)You;
             }
 
 
             else
             {
-                Console.Write("U broke smthn | ");
+                //Console.Write("U broke smthn | ");
                 return (int)Award.TF + (int)You;
             }
         }

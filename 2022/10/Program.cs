@@ -53,30 +53,9 @@ namespace Day10
 
             }
 
-            Console.BackgroundColor = ConsoleColor.DarkRed;
-            Console.ForegroundColor = ConsoleColor.Cyan;
-            //Draws the screen
-            for (int y = 0; y < 6; y++)
-            {
-                for (int x = 0; x < 40; x++)
-                {
-                    if (CRT[x, y])
-                    {
-                        Console.Write('█');
-                    }
-                    else
-                    {
-                        Console.Write(' ');
-                    }
-                }
-                Console.WriteLine("");
-            }
 
-
-            //Debug.WriteLine(currentValue);
-
-            Debug.WriteLine(
-                "Part 1: " +
+            Console.WriteLine(
+                "A: " +
                 (
                 phase[19] * 20 +
                 phase[59] * 60 +
@@ -86,6 +65,35 @@ namespace Day10
                 phase[219] * 220
                 )
             );
+
+
+            Console.WriteLine("B:");
+
+            //Draws the screen
+            for (int y = 0; y < 6; y++)
+            {
+                ConsoleColor originalBackgroundColor = Console.BackgroundColor;
+                ConsoleColor originalForegroundColor = Console.ForegroundColor;
+                for (int x = 0; x < 40; x++)
+                {
+                    Console.BackgroundColor = ConsoleColor.Black;
+                    Console.ForegroundColor = ConsoleColor.White;
+                    if (CRT[x, y])
+                    {
+                        Console.Write('█');
+                    }
+                    else
+                    {
+                        Console.Write(' ');
+                    }
+                }
+                Console.BackgroundColor = originalBackgroundColor;
+                Console.ForegroundColor = originalForegroundColor;
+                Console.WriteLine("");
+            }
+
+
+            //Debug.WriteLine(currentValue);
         }
         static void DrawAndSaveCurrentLine(int x, int CRTI)
         {
